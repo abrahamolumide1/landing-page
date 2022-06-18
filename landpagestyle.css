@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+main{
+    width: 800px;
+    height: 400px;
+}
+.sectionA{
+    background-image: url("bgdesktop.png");
+    display: flex;
+    flex-direction: row;
+}
+.sectionA div{
+    margin: auto;
+    padding: 10px;
+}
+.sectionB{
+    background-color: white;
+}
+.sectionC{
+    background-color: blue;
+}
