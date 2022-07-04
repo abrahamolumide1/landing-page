@@ -84,8 +84,8 @@ nav{
 /* sectionB */
 
 .sectionB{
-    background-color: white;
     padding: 100px 59px 200px 59px;
+    position: relative;
 }
 
 .feature{
@@ -122,9 +122,161 @@ nav{
 .feature:nth-child(even) .illustration{
     justify-content: flex-start;
 }
+
 .feature .illustration img{
     height: 90%;
 }
-.sectionC{
-    background-color: rgba(0, 0, 255, 0.582);
+
+.cta {
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    max-width: 600px;
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -80px;
+    z-index: 10;
+    background-color: white;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+}
+/* footer */
+
+footer {
+   background: var(--dark-cyan);
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 150px 70px 70px 70px;
+   font-size: 14px;
+   position: relative;
+}
+
+footer .logo {
+    height: 26px;
+    color: white;
+}
+
+footer .contact {
+    max-width: 350px;
+    width: 100%;
+    margin-right: 2rem;
+}
+
+footer .contact p {
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+footer .contact p img{
+    height: 14px;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer-links .links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer .socials {
+    font-size: 20px;
+  }
+
+.Copyright {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    font-size: 13px;
+}
+
+@media (max-width: 376px) {
+    .sectionA {
+        padding: 20px;
+        background: var(--pale-cyan) url("bg-hero-mobile.svg") no-repeat;
+    }
+    .btn-primary {
+        padding: 10px 30px;
+    }
+    .logo img {
+        height: 18px;
+    }
+    .first-content {
+        flex-direction: column;
+    }
+    .first-content .text-info {
+        text-align: center;
+        margin: 3rem 0;
+    }
+    .sectionB {
+        padding: 100px 20px 200px 20px;
+    }
+    .sectionB h2 {
+        font-size: 25px;
+    }
+    .feature {
+        flex-direction: column-reverse;
+        text-align: center;
+        height: 500px;
+    }
+    .feature .illustration img{
+        height: auto;
+        width: 90%;
+    }
+    .feature:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+    .cta {
+        text-align: center;
+        width: 340px;
+        padding: 30px 0;
+    }
+    .cta h2 {
+        font-size: 18px;
+    }
+    .sectionC {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 150px 30px 70px 30px;
+    }
+    .footer-links {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    .sectionC .social-links {
+        align-self: center;
+    }
+    .Copyright {
+        right: 50%;
+        transform: translateX(50%);
+        max-width: 300px;
+        width: 100%;
+    }
 }
