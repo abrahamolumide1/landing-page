@@ -1,24 +1,130 @@
-*{
+*,
+*::before,
+*::after{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-main{
-    width: 800px;
-    height: 400px;
+html{
+    font-family: 'Times New Roman', Times;
+    font-weight: 400;
+    font-size: 18px;
+    scroll-behavior: smooth;
 }
+h2, h3{
+    font-family: sans-serif;
+    font-weight: 600;
+}
+:root{
+    --pink: hsl(322, 100%, 66%);
+    --pale-cyan: hsl(193, 100%, 96%);
+    --dark-cyan: hsl(192, 100%, 9%);
+    --grayish-blue: hsl(208, 11%, 55%);
+}
+
+/*buttons*/
+button{
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 17px 64px;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.btn-primary{
+    background: white;
+}
+
+.btn-secondary{
+    color: white;
+    background: var(--pink);
+}
+/*sectionA*/
 .sectionA{
-    background-image: url("bgdesktop.png");
+    height: 100vh;
+    background: var(--pale-cyan) url("bgdesktop.png") no-repeat;
+    padding: 36px 59px;
+   }
+
+nav{
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
 }
-.sectionA div{
-    margin: auto;
-    padding: 10px;
+
+.logo img {
+    height: 26px;
+    width: auto;
 }
+
+.first-content{
+    display: flex;
+    align-items: center;
+}
+.text-info{
+    flex: 1;
+}
+
+.text-info p{
+    margin: 25px 0;
+}
+
+.first-content .illustration{
+    flex: 1;
+}
+.first-content .illustration img{
+    width: 100%;
+}
+
+/* sectionB */
+
 .sectionB{
     background-color: white;
+    padding: 100px 59px 200px 59px;
+}
+
+.feature{
+    display: flex;
+    height: 400px;
+    margin-bottom: 45px;
+    padding: 55px 55px 55px 100px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+}
+
+.feature .text-info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature .text-info p{
+    color: var(--grayish-blue);
+}
+
+.feature .illustration{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.feature:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.feature:nth-child(even) .illustration{
+    justify-content: flex-start;
+}
+.feature .illustration img{
+    height: 90%;
 }
 .sectionC{
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.582);
 }
